@@ -1,0 +1,118 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 4rem;
+  transition: background 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
+}
+
+.scrolled {
+  background: rgba(7, 6, 15, 0.85);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(124, 58, 237, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.logoAI {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logoDot {
+  color: var(--purple-3);
+  -webkit-text-fill-color: unset;
+}
+
+.logoName {
+  color: var(--text-primary);
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.links a:hover {
+  color: var(--purple-4);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.barOpen { transform: translateY(7px) rotate(45deg) !important; }
+.barHide { opacity: 0 !important; }
+.barOpen2 { transform: translateY(-7px) rotate(-45deg) !important; }
+
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+
+  .hamburger { display: flex; }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(7, 6, 15, 0.97);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+  }
+
+  .links.open { display: flex; }
+
+  .links li { padding: 0; }
+
+  .links a {
+    display: block;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+}

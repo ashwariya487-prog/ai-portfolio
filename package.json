@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://aishwaryagolla.github.io/ai-portfolio",
+  "homepage": "https://ashwariya487-prog.github.io/ai-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
